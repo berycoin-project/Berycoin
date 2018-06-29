@@ -152,7 +152,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 999999999999ULL;
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000"); // berycoin
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000107d107d1"); // berycoin
 
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x000037b243b6670ed181f57cb453cfb09b92c7a2f2257b5088a60e5da358511e"); //453354
@@ -198,11 +198,11 @@ public:
         checkpointData = (CCheckpointData) {
             {
                 { 0, uint256S("0x000037b243b6670ed181f57cb453cfb09b92c7a2f2257b5088a60e5da358511e")},
-                { 32, uint256S("0x")},
-                { 47, uint256S("0x")},
-                { 100, uint256S("0x")},
-                { 1000, uint256S("0x")},
-                { 2000, uint256S("0x")},
+                { 32, uint256S("0x0000de0614af800c263c4dfda777ba1f35b6c3f948a115281c6ab48e1b36e892")},
+                { 47, uint256S("0x0000db1ec19f4e42d4dcbb382390adc47ebb4dc3abd1e63880a6491cfd4516d6")},
+                { 100, uint256S("0x000024202605dfe495ec76e91ae8b67cf937d860c1273b24bbdb3d11e6d50344")},
+                { 1000, uint256S("0x0000d1147451d330f09f49c881fd520399e5fb8cba970d4bbcc35c03d2ea5b11")},
+                { 2000, uint256S("0x00001ef5870652155ef68e6d424ef39a2c35729b2fb08c84cd722c7289088634")},
             }
         };
 
