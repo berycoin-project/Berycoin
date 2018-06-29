@@ -232,7 +232,7 @@ public:
         strNetworkID = "test";
         consensus.nSubsidyHalvingInterval = 52596000; // berycoin halving every 4 years
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("0x");
+        consensus.BIP34Hash = uint256S("0x00003d6bc96562488973f8e67db5edc2f8769fb7d006c67707892c3ddca8731c");
         consensus.BIP65Height = 0; // 00000000007f6655f22f98e72ed80d8b06dc761d5da09df0fa1dc4be4f861eb6
         consensus.BIP66Height = 0; // 000000002104c8c45e99a8853285a3b592602a3ccde2b832481da85e9e4ba182
         consensus.powLimit = uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -262,7 +262,7 @@ public:
         consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000"); // berycoin
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x"); //1079274
+        consensus.defaultAssumeValid = uint256S("0x00003d6bc96562488973f8e67db5edc2f8769fb7d006c67707892c3ddca8731c"); //1079274
 
         pchMessageStart[0] = 0xac;
         pchMessageStart[1] = 0xb2;
@@ -270,16 +270,16 @@ public:
         pchMessageStart[3] = 0x2d;
         nDefaultPort = 19947;
         nPruneAfterHeight = 1000;
-        startNewChain = true;
+        startNewChain = false;
 
-        genesis = CreateGenesisBlock(1529747312, 80717, 0x1f00ffff, 1, 950 * COIN);
+        genesis = CreateGenesisBlock(1530311088, 12296, 0x1f00ffff, 1, 950 * COIN);
 
         if (startNewChain)
             MineGenesis(genesis, consensus.powLimit, true);
 
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x"));
-        assert(genesis.hashMerkleRoot == uint256S("0x"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00003d6bc96562488973f8e67db5edc2f8769fb7d006c67707892c3ddca8731c"));
+        assert(genesis.hashMerkleRoot == uint256S("0xa2d8b176459260065a3b3f10b2c46bb9b805f08b9700d59b179da30758e1f9ef"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -302,7 +302,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                {0, uint256S("0x")},
+                {0, uint256S("0x00003d6bc96562488973f8e67db5edc2f8769fb7d006c67707892c3ddca8731c")},
             }
         };
 
@@ -332,7 +332,7 @@ public:
         strNetworkID = "regtest";
         consensus.nSubsidyHalvingInterval = 52596000;
         consensus.BIP34Height = 0; // BIP34 has not activated on regtest (far in the future so block v1 are not rejected in tests) // activate for berycoin
-        consensus.BIP34Hash = uint256S("0x");
+        consensus.BIP34Hash = uint256S("0x4075df8d278b937b316ad54f385d0228b88a8e6c5f62478ba0a1313fac08147b");
         consensus.BIP65Height = 0; // BIP65 activated on regtest (Used in rpc activation tests)
         consensus.BIP66Height = 0; // BIP66 activated on regtest (Used in rpc activation tests)
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -366,16 +366,16 @@ public:
         pchMessageStart[3] = 0xd1;
         nDefaultPort = 29947;
         nPruneAfterHeight = 1000;
-        startNewChain = true;
+        startNewChain = false;
 
-        genesis = CreateGenesisBlock(1529747423, 1, 0x207fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1530311244, 3, 0x207fffff, 1, 50 * COIN);
 
         if (startNewChain)
             MineGenesis(genesis, consensus.powLimit, true);
 
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x"));
-        assert(genesis.hashMerkleRoot == uint256S("0x"));
+        assert(consensus.hashGenesisBlock == uint256S("0x4075df8d278b937b316ad54f385d0228b88a8e6c5f62478ba0a1313fac08147b"));
+        assert(genesis.hashMerkleRoot == uint256S("0xe492fa3139e964a661b9c37f37a0aa999b87403a7cce061466541dba630a8212"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
@@ -386,7 +386,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                {0, uint256S("0x")},
+                {0, uint256S("0x4075df8d278b937b316ad54f385d0228b88a8e6c5f62478ba0a1313fac08147b")},
             }
         };
 
